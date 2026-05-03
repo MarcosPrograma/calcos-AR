@@ -14,6 +14,11 @@ modelViewer.addEventListener('ar-status', (event)=>{
     }
 });
 
+modelViewer.addEventListener('load', () => {
+    const nombresAnimaciones = modelViewer.availableAnimations;
+    console.log("Animaciones encontradas:", nombresAnimaciones);
+});
+
 function switchScreen(screen) {
     let showViewer  = screen == 'model-viewer' ? 'block' : 'none';
     modelViewer.style.display = showViewer;
