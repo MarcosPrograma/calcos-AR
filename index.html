@@ -22,9 +22,12 @@
         ar-scale="fixed" 
         shadow-intensity="1"
         camera-controls
-        disable-pan
         disable-zoom 
-        touch-action="pan-y">
+        disable-pan
+        min-camera-orbit="auto 90deg auto"
+        max-camera-orbit="auto 90deg auto"
+        touch-action="pan-y"
+        bounds="tight">
         <button slot="ar-button" id="ar-button" class="btn">Ver en RA</button>
     </model-viewer>
     

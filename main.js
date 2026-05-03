@@ -1,4 +1,5 @@
 const modelViewer = document.querySelector('#visor-ar');
+const animaciones = ["Object_4.001Action", "Object_4Action", "Object_2Action", "Object_5Action"];
 
 modelViewer.addEventListener('ar-status', (event)=>{
     const status = event.detail.status;
@@ -12,11 +13,6 @@ modelViewer.addEventListener('ar-status', (event)=>{
     else if (status === 'not-presenting'){
         console.log("se cerro la ra")
     }
-});
-
-modelViewer.addEventListener('load', () => {
-    const nombresAnimaciones = modelViewer.availableAnimations;
-    console.log("Animaciones encontradas:", nombresAnimaciones);
 });
 
 function switchScreen(screen) {
