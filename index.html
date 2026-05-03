@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Calquitos</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/three@0.126.0/build/three.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+</head>
+
+<body>
+    <model-viewer 
+        id="visor-ar"
+        alt="Modelo 3D del David" 
+        src="assets/davidAnimated.glb" 
+        ar
+        ar-modes="webxr scene-viewer quick-look"
+        ar-placement="floor"
+        ar-scale="fixed" 
+        shadow-intensity="1"
+        camera-controls
+        disable-pan
+        disable-zoom 
+        touch-action="pan-y">
+        <button slot="ar-button" id="ar-button" class="btn">Ver en RA</button>
+    </model-viewer>
+    <script src="main.js"></script>
+</body>
+
+</html>
