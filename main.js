@@ -1,5 +1,22 @@
 const modelViewer = document.querySelector('#visor-ar');
-const animaciones = ["Object_4.001Action", "Object_4Action", "Object_2Action", "Object_5Action"];
+
+const modelos = {
+    'efebo': {
+        src: 'assets/efebo.glb',
+        alt: 'Efebo de subiaco',
+        poster: 'assets/poster-efebo.webp'
+    },
+    'fauno': {
+        src: 'assets/fauno.glb',
+        alt: 'Sátiro danzante',
+        poster: 'assets/poster-fauno.webp'
+    },
+    'luchadores': {
+        src: 'assets/luchadores.glb',
+        alt: 'Luchadores',
+        poster: 'assets/poster-luchadores.webp'
+    }
+};
 
 modelViewer.addEventListener('ar-status', (event)=>{
     const status = event.detail.status;
@@ -14,6 +31,18 @@ modelViewer.addEventListener('ar-status', (event)=>{
         console.log("se cerro la ra")
     }
 });
+
+window.switchModel = (element, name) => {
+    const modelo = modelos[name];
+    
+    modelViewer.src = modelo.src;
+    modelViewer.alt = modelo.alt;
+    modelViewer.poster = modelo.poster;
+
+    const slides = document.querySelectorAll(".slide");
+    slides.forEach((el) => el.classList.remove("selected"));
+    element.classList.add("selected");
+};
 
 function switchScreen(screen) {
     let showViewer  = screen == 'model-viewer' ? 'block' : 'none';

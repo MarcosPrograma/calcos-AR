@@ -20,19 +20,25 @@
         ar-modes="scene-viewer webxr quick-look"
         ar-placement="floor"
         ar-scale="fixed" 
-
         ar-status="not-presenting"
         interaction-prompt="auto"
-
         shadow-intensity="1"
         camera-controls
         disable-zoom 
         disable-pan
+        disable-tap
         skybox-height="2m"
         min-camera-orbit="auto 90deg auto"
         max-camera-orbit="auto 90deg auto"
         touch-action="pan-y"
         bounds="tight">
+        <div class="slider">
+            <div class="slides">
+                <button class="slide selected" onclick="switchModel(this, 'efebo')" style="background-image: url('assets/thumb-efebo.webp');"></button>
+                <button class="slide" onclick="switchModel(this, 'fauno')" style="background-image: url('assets/thumb-fauno.webp');"></button>
+                 <button class="slide" onclick="switchModel(this, 'luchadores')" style="background-image: url('assets/thumb-luchadores.webp');"></button>
+            </div>
+        </div>
         <button slot="ar-button" id="ar-button" class="btn">Ver en RA</button>
     </model-viewer>
     
