@@ -1,5 +1,13 @@
 const modelViewer = document.querySelector('#visor-ar');
 
+modelViewer.addEventListener('load', ()=>{
+    const animaciones = modelViewer.availableAnimations;
+    if (animaciones.length === 0) return;
+
+    modelViewer.animationName = animaciones[0];
+    modelViewer.play({repetitions: 1});
+});
+
 const modelos = {
     'efebo': {
         src: 'assets/efebo.glb',
@@ -9,7 +17,7 @@ const modelos = {
     'fauno': {
         src: 'assets/fauno.glb',
         alt: 'Sátiro danzante',
-        poster: 'assets/poster-fauno.webp'
+        poster: 'assets/poster-fauno.webp' 
     },
     'luchadores': {
         src: 'assets/luchadores.glb',
@@ -18,23 +26,23 @@ const modelos = {
     }
 };
 
-modelViewer.addEventListener('ar-status', (event)=>{
-    const status = event.detail.status;
+modelViewer.addEventListener('ar-status', (event) => {
+    const estado = event.detail.status;
 
-    if (status === 'session-started'){
+    if (estado === 'session-started') {
         console.log("ra iniciado");
     }
-    else if (status === 'object-placed'){
+    else if (estado === 'object-placed') {
         console.log("el modelo ha sido anclado");
     }
-    else if (status === 'not-presenting'){
+    else if (estado === 'not-presenting') {
         console.log("se cerro la ra")
     }
 });
 
 window.switchModel = (element, name) => {
     const modelo = modelos[name];
-    
+
     modelViewer.src = modelo.src;
     modelViewer.alt = modelo.alt;
     modelViewer.poster = modelo.poster;
@@ -45,10 +53,10 @@ window.switchModel = (element, name) => {
 };
 
 function switchScreen(screen) {
-    let showViewer  = screen == 'model-viewer' ? 'block' : 'none';
+    let showViewer = screen == 'model-viewer' ? 'block' : 'none';
     modelViewer.style.display = showViewer;
-    
-    if(!modelViewer.canActivateAR) {
+
+    if (!modelViewer.canActivateAR) {
         console.warn("este dispositivo no aguanta realidad aumentada");
-    }  
+    }
 }

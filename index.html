@@ -5,16 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Calquitos</title>
-    <link rel="stylesheet" href="style.css" />
-    
+    <title>Calcos en Realidad Aumentada</title>
+    <link rel="stylesheet" href="style.css"/>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
 </head>
 
 <body>
+    <!-- 
+        ar: Habilitar la capacidad de Realidad Aumentada. Si no está presente, el modelo solo se verá en 3D dentro de la web.
+        ar-modes: Definir qué tecnología de RA usar y en qué orden de prioridad. scene-viewer -> Nativa de Google en Android. webxr -> RA en Web. quick-look -> Nativa de Apple
+        ar-placement="floor": Anclar en superficies horizontales
+        ar-scale="fixed": Evitar que el usuario cambie el tamaño del modelo pellizcando la pantalla.  
+        ar-status="not-presenting": Reflejar estado actual de la sesión de RA.
+        interaction-prompt="auto": Indicador de una mano moviéndose para el usuario: Puede interactuar con el modelo si no lo hace después de unos segundos.
+        shadow-intensity="1": Controla la oscuridad de la sombra proyectada.
+        camera-controls: Habilitar la interacción en la vista 3D de la web.  
+        disable-zoom: Desactivar la capacidad de acercarse o alejarse del modelo en la vista web.  
+        disable-pan: Evitar que el usuario desplace el modelo lateralmente o hacia arriba/abajo.
+        skybox-height="2m": Definir la altura de la iluminación ambiental y el fondo.  
+        min-camera-orbit y max-camera-orbit: Bloquea la cámara para que solo rote horizontalmente.
+        bounds="tight": Ajusta el volumen de colisión al tamaño exacto del modelo. 
+    -->
     <model-viewer 
         id="visor-ar"
-        alt="Modelo 3D del David" 
+        alt="Efebo de Subiaco" 
         src="assets/efebo.glb" 
         ar
         ar-modes="scene-viewer webxr quick-look"
@@ -24,22 +38,21 @@
         interaction-prompt="auto"
         shadow-intensity="1"
         camera-controls
-        disable-zoom 
         disable-pan
-        disable-tap
         skybox-height="2m"
+        disable-zoom 
         min-camera-orbit="auto 90deg auto"
         max-camera-orbit="auto 90deg auto"
-        touch-action="pan-y"
+        touch-action="none"
         bounds="tight">
         <div class="slider">
             <div class="slides">
                 <button class="slide selected" onclick="switchModel(this, 'efebo')" style="background-image: url('assets/thumb-efebo.webp');"></button>
                 <button class="slide" onclick="switchModel(this, 'fauno')" style="background-image: url('assets/thumb-fauno.webp');"></button>
-                 <button class="slide" onclick="switchModel(this, 'luchadores')" style="background-image: url('assets/thumb-luchadores.webp');"></button>
+                <button class="slide" onclick="switchModel(this, 'luchadores')" style="background-image: url('assets/thumb-luchadores.webp');"></button>
             </div>
         </div>
-        <button slot="ar-button" id="ar-button" class="btn">Ver en RA</button>
+        <button slot="ar-button" id="ar-button" class="btn">Ver en Realidad Aumentada</button>
     </model-viewer>
     
     <script src="main.js"></script>
