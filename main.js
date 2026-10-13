@@ -1,13 +1,5 @@
 const modelViewer = document.querySelector('#visor-ar');
 
-modelViewer.addEventListener('load', ()=>{
-    const animaciones = modelViewer.availableAnimations;
-    if (animaciones.length === 0) return;
-
-    modelViewer.animationName = animaciones[0];
-    modelViewer.play({repetitions: 1});
-});
-
 const modelos = {
     'efebo': {
         src: 'assets/efebo.glb',
@@ -17,12 +9,27 @@ const modelos = {
     'fauno': {
         src: 'assets/fauno.glb',
         alt: 'Sátiro danzante',
-        poster: 'assets/poster-fauno.webp' 
+        poster: 'assets/poster-fauno.webp'
     },
     'luchadores': {
         src: 'assets/luchadores.glb',
         alt: 'Luchadores',
         poster: 'assets/poster-luchadores.webp'
+    },
+    'david': {
+        src: 'assets/david.glb',
+        alt: 'David',
+        poster: ''
+    },
+    'antinoo': {
+        src: 'assets/antinoo.glb',
+        alt: 'Antinoo',
+        poster: ''   
+    },
+    'ninoEspina': {
+        src: 'assets/ninoEspina.glb',
+        alt: 'Niño de la Espina',
+        poster: ''   
     }
 };
 
@@ -60,3 +67,11 @@ function switchScreen(screen) {
         console.warn("este dispositivo no aguanta realidad aumentada");
     }
 }
+
+modelViewer.addEventListener('load', () => {
+    const animaciones = modelViewer.availableAnimations;
+    if (animaciones.length === 0) return;
+
+    modelViewer.animationName = animaciones[0];
+    modelViewer.play({ repetitions: 1 });
+});
