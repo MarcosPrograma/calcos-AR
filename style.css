@@ -24,6 +24,44 @@ model-viewer {
     height: 100vh;
 }
 
+#logo-link {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1999;
+}
+
+#logo-link img {
+    width: 3rem;
+    height: auto;
+    cursor: pointer;
+}
+
+#info-button {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1999;
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    /* semi-transparente */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    /* soporte Safari */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+#info-button img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
 .btn {
     background-color: rgba(255, 0, 0, 0.548);
     border-width: 2px;
@@ -33,7 +71,7 @@ model-viewer {
 #ar-button {
     z-index: 2;
     position: fixed;
-    top: 2rem; 
+    top: 2rem;
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
@@ -46,10 +84,10 @@ model-viewer {
 
 .slider {
     width: 100%;
+    position: absolute;
+    bottom: 2rem;
     text-align: center;
     overflow: hidden;
-    position: absolute;
-    bottom: 4rem;
 }
 
 .slides {
@@ -58,13 +96,13 @@ model-viewer {
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    padding: 10px;
+    padding: 10px 10px;
     gap: 15px;
-    justify-content: center;
+    justify-content: safe center;
 }
 
 .slide {
-    scroll-snap-align: start;
+    scroll-snap-align: center;
     flex-shrink: 0;
     width: 70px;
     height: 70px;
