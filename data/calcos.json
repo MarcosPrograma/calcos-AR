@@ -23,7 +23,7 @@
     ]
   },
   "luchadores": {
-    "titulo": "Fauno Danzante",
+    "titulo": "Luchadores",
     "tecnica": "Calco en Terracota",
     "dimensiones": "00cm x 00cm x 00cm",
     "ubicacion": "Facultad de Artes (UNLP)",
@@ -46,7 +46,7 @@
     ]
   },
   "antinoo": {
-    "titulo": "Fauno Danzante",
+    "titulo": "Antinoo",
     "tecnica": "Calco en Terracota",
     "dimensiones": "00cm x 00cm x 00cm",
     "ubicacion": "Facultad de Artes (UNLP)",
@@ -57,8 +57,8 @@
     ]
   },
   "ninoEspina": {
-    "titulo": "Fauno Danzante",
-    "tecnica": "Calco en Terracota",
+    "titulo": "Niño de la Espina",
+    "tecnica": "Calco en Yeso",
     "dimensiones": "00cm x 00cm x 00cm",
     "ubicacion": "Facultad de Artes (UNLP)",
     "autor": "Taller de producción desconocido",

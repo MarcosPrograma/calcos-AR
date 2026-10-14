@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 html {
     box-sizing: border-box;
     font-size: 16px;
@@ -12,7 +14,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: "Barlow", sans-serif;
     line-height: 1.5;
     background: #191919;
 }
@@ -62,12 +64,6 @@ model-viewer {
     height: 1.5rem;
 }
 
-.btn {
-    background-color: rgba(255, 0, 0, 0.548);
-    border-width: 2px;
-    border-radius: 2px;
-}
-
 #ar-button {
     position: fixed;
     top: 1rem;
@@ -81,7 +77,8 @@ model-viewer {
     z-index: 2;
     box-sizing: border-box;
     cursor: pointer;
-    font-weight: bold;
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
     color: #ffffff;
     border-radius: 8px;
     border: 3px solid;
@@ -130,7 +127,6 @@ model-viewer {
     transform: scale(1.1);
 }
 
-/* Overlay negro */
 #info-overlay {
     position: fixed;
     top: 0;
@@ -138,44 +134,50 @@ model-viewer {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
-    z-index: 1998;
+    z-index: 2;
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 #info-overlay.visible {
     opacity: 1;
-    pointer-events: all;
+    visibility: visible;
+    pointer-events: auto;
 }
 
-/* panel de información */
 #info-panel {
-    position: absolute;
-    width: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 400px;
     height: 100vh;
+    height: 100dvh;
     overflow-y: auto;
     overflow-x: hidden;
     max-width: 400px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    padding-top: 3rem;
-    padding-left: 20px;
-    padding-right: 20px;
-    z-index: 2001;
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(18px);
+    padding: 3rem 20px 2rem 20px;
+    z-index: 4;
     color: white;
-    display: none;
     line-height: 28px;
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s ease;
 }
 
 #info-panel.visible {
-    display: block;
+    transform: translateX(0);
+    visibility: visible;
 }
 
 #info-panel::after {
     content: "";
     display: block;
-    height: 5rem;
+    height: 4rem;
 }
 
 .panel-header {
@@ -185,28 +187,37 @@ model-viewer {
 }
 
 .panel-header h2 {
-    padding-top: 40px;
+    padding-top: 10px;
     margin: 0;
+    font-size: 1.5rem;
 }
 
 #close-panel {
     cursor: pointer;
-    width: 1.5rem;
-    height: auto;
-    padding: 10px;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 6px;
     float: right;
+    transition: transform 0.2s ease;
 }
 
-.hidden {
-    display: none;
+#close-panel:active {
+    transform: scale(0.9);
 }
 
 #info-panel hr {
     border: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
     margin: 0.75rem 0 1rem 0;
 }
 
+#info-panel h4 {
+    font-weight: 300;
+    color: #d1d1d1;
+    margin-bottom: 1.5rem;
+}
+
 #info-panel p {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
 }
