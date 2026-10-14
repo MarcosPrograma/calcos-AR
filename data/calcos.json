@@ -1,0 +1,70 @@
+{
+  "efebo": {
+    "titulo": "Efebo de Subiaco",
+    "tecnica": "Calco en Terracota",
+    "dimensiones": "00cm x 00cm x 00cm",
+    "ubicacion": "Facultad de Artes (UNLP)",
+    "autor": "Manifattura Di Signa",
+    "descripcion": [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu sagittis est, et fermentum urna. Sed non luctus nunc.",
+      "Integer in diam sed purus malesuada egestas. Proin vehicula vitae risus a efficitur."
+    ]
+  },
+  "fauno": {
+    "titulo": "Fauno Danzante",
+    "tecnica": "Calco en Terracota",
+    "dimensiones": "00cm x 00cm x 00cm",
+    "ubicacion": "Facultad de Artes (UNLP)",
+    "autor": "Manifattura Di Signa",
+    "descripcion": [
+      "El Fauno Danzante (también denominado Sátiro danzante o Sátiro de los címbalos) es una de las esculturas más célebres de la Galería Uffizi en Florencia, Italia. Realizada en mármol y datada en el siglo I d.C., su autor permanece desconocido. La pieza representa a un fauno (o sátiro) en el instante en que ejecuta un paso de danza, marcando el ritmo con dos instrumentos de percusión: el scabillum, una sandalia de madera provista de piezas metálicas sonoras, y el albogue o címbalo, compuesto por dos discos circulares. Según el investigador Fabricio Paolucci, la obra formaría parte de un grupo escultórico mayor junto a una ninfa sentada, conjunto conocido como la invitación a la danza.",
+      "A lo largo de los siglos, la escultura pasó por distintas colecciones privadas, entre ellas la de Eurialo Silvestri, hasta ingresar en la prestigiosa colección de la familia Medici. Este linaje, reconocido por su papel de mecenazgo en la historia del arte europeo, fue responsable de la creación (junto al arquitecto Giorgio Vasari) del Palacio de los Uffizi, actual sede de la célebre galería que hoy alberga la pieza.",
+      "En el Área de Museo, Exposiciones y Conservación del Patrimonio de la Facultad de Artes de la Universidad Nacional de La Plata se conserva un fragmento en terracota correspondiente a la pierna izquierda y su soporte, realizado por la Manifattura di Signa, empresa florentina fundada a fines del siglo XIX y especializada en la         reproducción de obras maestras del arte para su difusión y comercialización internacional. Este fragmento, producido probablemente entre 1900 y 1920, testimonia tanto el interés de la época por el estudio y la apropiación de los modelos clásicos como la función pedagógica y decorativa de las reproducciones en el ámbito académico y museístico."  
+    ]
+  },
+  "luchadores": {
+    "titulo": "Fauno Danzante",
+    "tecnica": "Calco en Terracota",
+    "dimensiones": "00cm x 00cm x 00cm",
+    "ubicacion": "Facultad de Artes (UNLP)",
+    "autor": "Manifattura Di Signa",
+    "descripcion": [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu sagittis est, et fermentum urna. Sed non luctus nunc.",
+      "Integer in diam sed purus malesuada egestas. Proin vehicula vitae risus a efficitur."
+    ]
+  },
+  "david": {
+    "titulo": "Cabeza del David",
+    "tecnica": "Calco en Yeso",
+    "dimensiones": "120cm x 75cm x 43cm",
+    "ubicacion": "Hall, Planta Baja, Facultad de Artes (UNLP)",
+    "autor": "Taller de producción desconocido",
+    "descripcion": [
+      "La pieza original, creada por Miguel Ángel Buonarroti, se encuentra emplazada en la Galería de la Academia de Florencia y constituye uno de los íconos más reconocidos del arte universal. A finales del siglo XIX, en un momento en el que el campo artístico argentino se hallaba en plena conformación, el sistema de calcos de esculturas europeas canónicas se consolidó como una herramienta pedagógica fundamental. Estos calcos no solo contribuían a la educación estética y al perfeccionamiento técnico de los estudiantes, sino que también posibilitaban el acceso a obras que, de otro modo, resultaban inalcanzables.",
+      "La Cabeza del David forma parte de este legado y se conserva dentro del patrimonio cultural de la Facultad de Artes de la Universidad Nacional de La Plata. La pieza fue puesta en valor en el año 2022 por el grupo de docentes y estudiantes del Área de Museo, Exposiciones y Conservación del Patrimonio de la institución formados para tal fin, quienes realizaron tareas de conservación y registro. Aunque aún se desconoce el taller de origen de este calco y las circunstancias exactas de su llegada a la Argentina, su presencia abre la posibilidad de establecer hipótesis y trazar vínculos con los circuitos de circulación artística de la época.",
+      "Cabe destacar que en nuestro país existen otras réplicas de este fragmento escultórico, resguardadas en el Museo de Calcos y Escultura Comparada Ernesto de la Cárcova y en el Museo de Esculturas Luis Perlotti"
+    ]
+  },
+  "antinoo": {
+    "titulo": "Fauno Danzante",
+    "tecnica": "Calco en Terracota",
+    "dimensiones": "00cm x 00cm x 00cm",
+    "ubicacion": "Facultad de Artes (UNLP)",
+    "autor": "Manifattura Di Signa",
+    "descripcion": [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu sagittis est, et fermentum urna. Sed non luctus nunc.",
+      "Integer in diam sed purus malesuada egestas. Proin vehicula vitae risus a efficitur."
+    ]
+  },
+  "ninoEspina": {
+    "titulo": "Fauno Danzante",
+    "tecnica": "Calco en Terracota",
+    "dimensiones": "00cm x 00cm x 00cm",
+    "ubicacion": "Facultad de Artes (UNLP)",
+    "autor": "Taller de producción desconocido",
+    "descripcion": [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu sagittis est, et fermentum urna. Sed non luctus nunc.",
+      "Integer in diam sed purus malesuada egestas. Proin vehicula vitae risus a efficitur."
+    ]
+  }
+}
