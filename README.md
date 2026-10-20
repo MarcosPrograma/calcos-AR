@@ -13,24 +13,31 @@ En los dispositivos compatibles, se habilita la opción de visualizar el modelo 
 * **WebXR:** permite acceder a experiencias de RA directamente desde el navegador. En Android, la compatibilidad depende del navegador, su versión y el dispositivo. En iOS, el soporte de WebXR para RA no está disponible de forma general en Safari, por lo que se recomienda utilizar una alternativa compatible, como AR Quick Look.
 * **Apple AR Quick Look:** tecnología exclusiva de los dispositivos Apple compatibles. Permite visualizar modelos 3D en RA desde Safari y otros contextos compatibles en iOS y iPadOS. Requiere una versión compatible del sistema operativo y no funciona en Android.
 
+_Nota: la disponibilidad de cada modo de RA depende de la compatibilidad del dispositivo, el navegador y el formato del modelo 3D._
+
 ## Configuración de Realidad Aumentada 🛠️
 _La experiencia utiliza atributos de configuración del visor 3D web para controlar la visualización de los modelos, las interacciones y el comportamiento de la RA._
 
 | Atributo | Descripción |
 | :------- | :---: |
-| ar   | Habilita la opción de visualizar el modelo en Realidad Aumentada. Si no está presente, el modelo se muestra únicamente en el visor 3D web. |
-| ar-modes | Define las tecnologías de RA disponibles y su orden de prioridad: scene-viewer, webxr y quick-look. |   
+| ar | Habilita la opción de visualizar el modelo en Realidad Aumentada. Si no está presente, el modelo se muestra únicamente en el visor 3D web. |
+| ar-modes | Define las tecnologías de RA disponibles y su orden de prioridad: scene-viewer, webxr y quick-look. | 
+| ar-placement="floor" | Establece el suelo como superficie de colocación del modelo en los modos compatibles. |
+| ar-scale="fixed" | Mantiene fija la escala del modelo en los modos de RA compatibles, evitando que el usuario modifique su tamaño mediante gestos. |   
+| ar-status="not-presenting" | Permite consultar el estado de la sesión de RA mediante el evento o mecanismo correspondiente de la biblioteca utilizada. |
+| interaction-prompt="auto" | Muestra automáticamente una indicación visual para orientar al usuario sobre cómo interactuar con el modelo. |   
+| shadow-intensity="1" | Controla la intensidad de las sombras proyectadas por el modelo. |
+| skybox-height="2m" | Define la altura del entorno de iluminación y fondo utilizado por el visor. |   
         
-        ar: Permite habilitar la opción de Realidad Aumentada (RA). Si no está presente, el modelo solo se verá en 3D dentro de la web.
-        ar-modes: Definir qué tecnología de RA usar y en qué orden de prioridad. scene-viewer es Nativa de Google en Android. webxr es RA en Web. quick-look es Nativa de Apple.
-        ar-placement="floor": Anclar en superficies horizontales.
-        ar-scale="fixed": Evitar que el usuario cambie el tamaño del modelo pellizcando la pantalla.  
-        ar-status="not-presenting": Reflejar estado actual de la sesión de RA.
-        interaction-prompt="auto": Indicador de una mano moviéndose para el usuario. Puede interactuar con el modelo si no lo hace después de unos segundos.
-        shadow-intensity="1": Controla la oscuridad de la sombra proyectada.
-        camera-controls: Habilitar la interacción en la vista 3D de la web.  
-        disable-zoom: Desactivar la capacidad de acercarse o alejarse del modelo en la vista web.  
-        disable-pan: Evitar que el usuario desplace el modelo lateralmente o hacia arriba/abajo.
-        skybox-height="2m": Definir la altura de la iluminación ambiental y el fondo.  
-        min-camera-orbit y max-camera-orbit: Bloquea la cámara para que solo rote horizontalmente.
-        bounds="tight": Ajusta el volumen de colisión al tamaño exacto del modelo. 
+## Controles de visualización 3D 👀
+
+| Atributo | Descripción |
+| :------- | :---: |
+| camera-controls | Habilita la interacción con la cámara para explorar el modelo 3D desde distintos ángulos. |
+| disable-zoom | Desactiva el acercamiento y alejamiento del modelo en el visor web. | 
+| disable-pan | Desactiva el desplazamiento lateral o vertical del modelo en el visor web. |
+| min-camera-orbit | Establece el límite mínimo de movimiento de la cámara. |   
+| max-camera-orbit | Establece el límite máximo de movimiento de la cámara. |
+| bounds="tight" | Ajusta los límites del modelo a su geometría para definir un volumen de interacción más preciso. |   
+
+_**Consideraciones técnicas:** algunos atributos pertenecen a la biblioteca de visualización 3D utilizada y no a la API nativa de ARCore, WebXR o AR Quick Look. Su comportamiento puede variar según la implementación y el modo de visualización. Se recomienda verificar su compatibilidad con la versión de la biblioteca empleada._
